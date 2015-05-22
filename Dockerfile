@@ -1,5 +1,5 @@
 # pull base image
-FROM akiotsutsumi/dockerfile-linux-centos6
+FROM akiotsutsumi/docker-centos6
 
 # Maintainer
 MAINTAINER Akio Tsutsumi <akiodeveloper@gmail.com>
@@ -23,3 +23,5 @@ RUN rpm -ivh $DOWNLOAD_DIR/$JDK_RPM
 ENV JAVA_HOME /usr/java/default
 RUN rm $DOWNLOAD_DIR/$JDK_RPM
 
+# create share directory
+RUN mkdir /share
